@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Center Top Image Website</title>
+  <style>
+    @font-face {
+      font-family: 'globalfont';
+      src: url('lib/font.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'globalfont-bold';
+      src: url('lib/font-bold.ttf') format('truetype');
+    }
+
+    /* Apply the global font to all elements */
+    html, body {
+      font-family: 'globalfont', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #292a2d;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .center-top-img {
+      position: relative;
+      top: 50px; /* Adjust as needed */
+    }
+
+    .center-top-img img {
+      width: 510px; /* Adjust as needed */
+      height: auto;
+    }
+
+    .right-top-img,
+    .left-top-img {
+      position: absolute;
+      top: 50px; /* Adjust as needed */
+    }
+
+    .right-top-img {
+      right: 0;
+    }
+
+    .left-top-img {
+      left: 0;
+    }
+
+    .right-top-img img,
+    .left-top-img img {
+      width: 200px; /* Adjust as needed */
+      height: auto;
+    }
+
+    /* New style for the added div */
+    .additional-content {
+      position: absolute;
+      top: 48%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust to center */
+      background-color: #292a2d; /* Same as the website background color */
+      padding: 20px; /* Add padding for content */
+      width: 500px;
+      border-radius: 15px;
+    }
+
+    /* Style for the card */
+    .card {
+      position: relative;
+      width: 155px; /* Adjust width as needed */
+      height: 173px; /* Adjust height as needed */
+      background-color: transparent;
+      border: 1px solid #5a5a5a; /* White border */
+      border-radius: 8px;
+      border-style: dashed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Added to stack text and image vertically */
+      position: relative;
+    }
+
+    .card:hover{
+        background-color: #3C4043;
+        cursor: pointer;
+    }
+
+    .card img {
+      max-width: 65%;
+      max-height: 65%;
+    }
+
+    /* Style for the text */
+    .card-text {
+      position: absolute;
+      top: 20px; /* Adjust as needed */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%);
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-top-img">
+    <img src="lib/center-top-img-abt-chrome.png" alt="Center Top Image">
+  </div>
+  <div class="additional-content">
+    <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1811869218%3A1714212787565967&theme=mn&ddm=0"> <!-- Anchor tag for linking -->
+      <div class="card">
+        <div class="card-text">Add</div> <!-- Text goes here -->
+        <img src="lib/addimg.png" alt="Additional Image">
+      </div>
+    </a>
+  </div>
+  <div class="right-top-img">
+    <img src="lib/right-top-img.png" alt="Right Top Image">
+  </div>
+  <div class="left-top-img">
+    <img src="lib/left-top-img.png" alt="Left Top Image">
+  </div>
+</body>
+</html>
